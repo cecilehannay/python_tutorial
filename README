@@ -16,4 +16,5 @@ git init .
 git status
 git add file.txt
 git commit -m "Adding sample data file"
+git log
 
