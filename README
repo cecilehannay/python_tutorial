@@ -1,0 +1,19 @@
+# Virtual  environment
+
+## create virtual environment for this project:
+conda create --name python_tutorial python
+
+## activate the virtual environment
+conda activate python_tutorial
+
+## List available environment
+conda envs list
+
+# Git instructions
+
+## Make the directory a Git repository
+git init .
+git status
+git add file.txt
+git commit -m "Adding sample data file"
+
