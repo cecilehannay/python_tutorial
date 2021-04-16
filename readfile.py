@@ -3,7 +3,9 @@
 # datum is going to be each line of the table
 
 # Initialize my data variable   
-data = []
+data = {'date':[],
+    'time':[],
+    'temp':[]}
 
 # read the data file
 filename = "data/wxobs20170821.txt"
@@ -14,11 +16,18 @@ for _ in range(3):
     datafile.readline()
 
 # read and parse the rest of the file
-for iline in datafile:
-    datum = iline.split()
-    data.append(datum)
+for line in datafile:
+    split_line = line.split()
+    data['date'].append(split_line[0])
+    data['time'].append(split_line[1])
+    data['temp'].append(split_line[2])
 
 datafile.close()
+
+# DEBUG
+print(data['time'])
+
+
 
 
 
