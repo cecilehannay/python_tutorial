@@ -30,10 +30,25 @@ for line in datafile:
 
 datafile.close()
 
-# DEBUG
-#print(data['time'])
-print(data['temperature'])
+# Compute the wind chill temperature
+def compute_windchill(t, v):
+   a = 35.74
+   b = 0.6215
+   c = 35.75
+   d = 0.4275
+
+   v2 = v ** 2
+   wci = a + (b * t) - (c * v2) + (d * t * v2)
+   return wci
 
 
+# Compute wind chill factor
+windchill = []
+for temperature, windspeed in zip(data['temperature'], data['windspeed']):
+    windchill.append(compute_windchill(temperature, windspeed))
+
+
+# Debug
+print(windchill)
 
 
