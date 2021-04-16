@@ -1,11 +1,15 @@
 
-# data is the whole table
-# datum is going to be each line of the table
+# Columns names and columns indices
+columns = {'date':0, 'time':1, 'temp':2}
+
+
+# Data types for each column (only if non-string)
+types = {'temp': float}
 
 # Initialize my data variable   
-data = {'date':[],
-    'time':[],
-    'temp':[]}
+data = {}
+for column in columns:
+    data[column] = []
 
 # read the data file
 filename = "data/wxobs20170821.txt"
@@ -18,14 +22,16 @@ for _ in range(3):
 # read and parse the rest of the file
 for line in datafile:
     split_line = line.split()
-    data['date'].append(split_line[0])
-    data['time'].append(split_line[1])
-    data['temp'].append(float(split_line[2]))
+    for column in columns:
+        icol = columns[column]
+        itype = types.get(column, str)
+        value = itype(split_line[icol])
+        data[column].append(value)
 
 datafile.close()
 
 # DEBUG
-print(data['time'])
+#print(data['time'])
 print(data['temp'])
 
 
