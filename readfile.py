@@ -1,10 +1,10 @@
 
 # Columns names and columns indices
-columns = {'date':0, 'time':1, 'temp':2}
+columns = {'date':0, 'time':1, 'temperature':2, 'windspeed':7}
 
 
 # Data types for each column (only if non-string)
-types = {'temp': float}
+types = {'temperature': float, 'windspeed':float}
 
 # Initialize my data variable   
 data = {}
@@ -32,7 +32,7 @@ datafile.close()
 
 # DEBUG
 #print(data['time'])
-print(data['temp'])
+print(data['temperature'])
 
 
 
