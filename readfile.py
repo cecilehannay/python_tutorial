@@ -20,13 +20,13 @@ for line in datafile:
     split_line = line.split()
     data['date'].append(split_line[0])
     data['time'].append(split_line[1])
-    data['temp'].append(split_line[2])
+    data['temp'].append(float(split_line[2]))
 
 datafile.close()
 
 # DEBUG
 print(data['time'])
-
+print(data['temp'])
 
 
 
