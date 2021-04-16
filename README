@@ -18,3 +18,4 @@ git add file.txt
 git commit -m "Adding sample data file"
 git log
 git log --oneline
+git mv file1 file2
