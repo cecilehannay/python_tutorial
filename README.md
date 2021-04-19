@@ -23,12 +23,16 @@ https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw
 
 ## Local repo
 >*git init .*
+>
 >*git status*
-git add file.txt
-git commit -m "Adding sample data file"
-git log
-git log --oneline
-git mv file1 file2
+>
+>*git add file.txt*
+>
+>*git commit -m "Adding sample data file"*
+>
+>*git log* or *git log --oneline*
+>
+>*git mv file1 file2*
 
 ## Remote repo
 Create a new repo on the github page. Copy link to this repo: https://github.com/<user_name>/<repo>.git
