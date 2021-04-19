@@ -1,0 +1,23 @@
+def print_comparison(name, dates, times, obs_data, computed_data):
+    """
+    Print a comparison of two time series (original and computed)
+
+    Parameters:
+       name: A string name for the data being compared. (Limited
+          to 9 characters in length)
+       dates: List of strings representing the dates for each data element
+       times: List of strings representing time of day for each data element
+       obs_data: List of observed data (floats)
+       computed_data: List of computed data (floats)
+    """
+
+
+    # Output comparison of data
+    print('                ORIGINAL  COMPUTED')
+    print(' DATE    TIME  WINDCHILL WINDCHILL DIFFERENCE')
+    print('------- ------ --------- --------- ----------')
+    zip_data = zip(data['date'], data['time'], data['windchill'], windchill)
+    for date, time, wc_obs, wc_comp in zip_data:
+        wc_diff = wc_obs - wc_comp
+        print(f'{date} {time:>6} {wc_obs:9.6f} {wc_comp:9.6f} {wc_diff:10.6f}')
+
