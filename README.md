@@ -1,27 +1,29 @@
-# Notes  
-## On the web
+# Documentation  
+
+## Notes on the web
 https://ncar.github.io/python-tutorial/
 
-## On youtube
+## Videos on youtube
 https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw
 
 
-# Virtual  environment
+# Virtual environment 
 
 ## create virtual environment for this project:
-conda create --name python_tutorial python
+>*conda create --name python_tutorial python*
 
 ## activate the virtual environment
-conda activate python_tutorial
+>*conda activate python_tutorial*
 
 ## List available environment
-conda envs list
+>*conda envs list*
+
 
 # Git instructions
 
 ## Local repo
-git init .
-git status
+>*git init .*
+>*git status*
 git add file.txt
 git commit -m "Adding sample data file"
 git log
