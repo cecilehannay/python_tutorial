@@ -6,6 +6,7 @@ https://ncar.github.io/python-tutorial/
 ## Videos on youtube
 https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw
 
+-------------------------------------------------------
 
 # Virtual environment 
 
@@ -18,6 +19,7 @@ https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw
 ## List available environment
 >*conda envs list*
 
+-------------------------------------------------------
 
 # Git instructions
 
@@ -37,8 +39,12 @@ https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw
 ## Remote repo
 Create a new repo on the github page. Copy link to this repo: https://github.com/<user_name>/<repo>.git
 
-push an existing repository from the command line
-git remote add origin git@github.com:cecilehannay/tutorials.git
-git remote -v
-git branch -M main
-git push -u origin main
+Push an existing repository from the command line
+>*git remote add origin git@github.com:cecilehannay/tutorials.git*
+>
+>*git remote -v*
+>
+>*git branch -M main*
+>
+>*git push -u origin main*
+>
