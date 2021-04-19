@@ -48,3 +48,11 @@ Push an existing repository from the command line
 >
 >*git push -u origin main*
 >
+
+### Adding .gitignore 
+Include file we don't want to include like  __pycache__/
+
+>* git add .gitignore*
+>
+>* git commit -m "Ignoring pycache"*
+

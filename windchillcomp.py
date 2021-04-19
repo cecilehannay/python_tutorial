@@ -1,4 +1,5 @@
 from readdata import read_data
+from printing import print_comparison
 
 # Columns names and columns indices
 columns = {'date':0, 'time':1, 'temperature':2, 'windspeed':7, 'windchill':12}
@@ -26,14 +27,5 @@ windchill = []
 for temperature, windspeed in zip(data['temperature'], data['windspeed']):
     windchill.append(compute_windchill(temperature, windspeed))
 
-
-
-# Output comparison of data
-print('                ORIGINAL  COMPUTED')
-print(' DATE    TIME  WINDCHILL WINDCHILL DIFFERENCE')
-print('------- ------ --------- --------- ----------')
-zip_data = zip(data['date'], data['time'], data['windchill'], windchill)
-for date, time, wc_orig, wc_comp in zip_data:
-    wc_diff = wc_orig - wc_comp
-    print(f'{date} {time:>6} {wc_orig:9.6f} {wc_comp:9.6f} {wc_diff:10.6f}')
+print_comparison('WINDCHILL', data['date'], data['time'], data['windchill'], windchill)
 
