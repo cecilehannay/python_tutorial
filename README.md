@@ -1,3 +1,11 @@
+# Notes  
+## On the web
+https://ncar.github.io/python-tutorial/
+
+## On youtube
+https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw
+
+
 # Virtual  environment
 
 ## create virtual environment for this project:
