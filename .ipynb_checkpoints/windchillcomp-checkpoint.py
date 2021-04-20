@@ -17,6 +17,10 @@ windchill = []
 for temperature, windspeed in zip(data['temperature'], data['windspeed']):
     windchill.append(compute_windchill(temperature, windspeed))
 
+# Compute wind chill factor (using comprehension). The 3 lines above could be written.
+windchill = [compute_windchill(t, w) for t, w in zip(data['temperature'], data['windspeed'])]
+
+
 # Print comparison
 print_comparison('WINDCHILL', data['date'], data['time'], data['windchill'], windchill)
 
