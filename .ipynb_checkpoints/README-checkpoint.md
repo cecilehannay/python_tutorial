@@ -17,7 +17,7 @@ https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw
 >*conda activate python_tutorial*
 
 ## List available environment
->*conda envs list*
+>*conda env list*
 
 -------------------------------------------------------
 
@@ -60,11 +60,11 @@ Include file we don't want to include like  __pycache__/
 
 -------------------------------------------------------
 
-### Creating package
+# Creating package
 
-A package is a directory containing a file called __init__.py inside it. (Note that this file is commonly empty.)
+A package is a directory containing a file called *__init__.py* inside it. (Note that this file is commonly empty.)
 
-Create a new directory called mysci and create an empty file in it called __init__.py:
+Create a new directory called mysci and create an empty file in it called *__init__.py*
 
 >*mkdir utils*
 >
@@ -72,14 +72,14 @@ Create a new directory called mysci and create an empty file in it called __init
 >
 >*touch __init__.py*
 >
->*cd ..
+>*cd ..*
 
 Then, move the 3 modules into this package:
 >*git mv readdata.py myutils/*
 >
 >*git mv printing.py myutils/*
 >
->*git mv computation.py myutils/
+>*git mv computation.py myutils/*
 
 
 Then, let’s modify the import statements:
@@ -90,9 +90,9 @@ Then, let’s modify the import statements:
 >*from mysci.computation import compute_heatindex*
 
 Stage everything (don’t forget the __init__.py file!) and commit
->* git add -A*
+>*git add -A*
 >
->* git commit -m "Creating myutils package"*
+>*git commit -m "Creating myutils package"*
 
 
 
