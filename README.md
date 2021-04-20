@@ -52,7 +52,7 @@ Push an existing repository from the command line
 >
 
 ### Adding .gitignore 
-Include file we don't want to include like  __pycache__/
+Include file we don't want to include like  \__pycache__\
 
 >* git add .gitignore*
 >
@@ -62,15 +62,15 @@ Include file we don't want to include like  __pycache__/
 
 # Creating package
 
-A package is a directory containing a file called *__init__.py* inside it. (Note that this file is commonly empty.)
+A package is a directory containing a file called \__init__.py\ inside it. (Note that this file is commonly empty.)
 
-Create a new directory called mysci and create an empty file in it called *__init__.py*
+Create a new directory called mysci and create an empty file in it called \__init__.py\
 
 >*mkdir utils*
 >
 >*cd utils*
 >
->*touch __init__.py*
+>*touch \__init__.py\*
 >
 >*cd ..*
 
@@ -89,7 +89,7 @@ Then, let’s modify the import statements:
 >
 >*from myutils.computation import compute_heatindex*
 
-Stage everything (don’t forget the __init__.py file!) and commit
+Stage everything (don’t forget the \__init__.py\ file!) and commit
 >*git add -A*
 >
 >*git commit -m "Creating myutils package"*

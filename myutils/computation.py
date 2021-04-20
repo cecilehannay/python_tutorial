@@ -1,4 +1,4 @@
-import math
+import math as m
 
 # Compute the heat index
 def compute_heatindex(t, rh_pct):
@@ -69,7 +69,7 @@ def compute_dewpoint(t, rh_pct):
    b = 18.678
    c = 257.14 # deg C
 
-   gamma = math.log(rh) + (b * tempC) / (c + tempC)
+   gamma = m.log(rh) + (b * tempC) / (c + tempC)
    tdp = c * gamma / (b - gamma)
 
    tdp_F = 9 / 5 * tdp + 32 # Convert deg C to deg F
