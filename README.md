@@ -83,11 +83,11 @@ Then, move the 3 modules into this package:
 
 
 Then, let’s modify the import statements:
->*from mysci.readdata import read_data*
+>*from myutils.readdata import read_data*
 >
->*from mysci.printing import print_comparison*
+>*from myutils.printing import print_comparison*
 >
->*from mysci.computation import compute_heatindex*
+>*from myutils.computation import compute_heatindex*
 
 Stage everything (don’t forget the __init__.py file!) and commit
 >*git add -A*
