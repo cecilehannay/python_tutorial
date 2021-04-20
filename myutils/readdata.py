@@ -1,4 +1,5 @@
 def read_data(columns, types={}, filename="data/wxobs20170821.txt"):
+   
     """
     Read data from CU Boulder Weather Station data file
 
@@ -31,8 +32,8 @@ def read_data(columns, types={}, filename="data/wxobs20170821.txt"):
             value = itype(split_line[icol])
             data[column].append(value)
 
-     datafile.close()
+    datafile.close()
 
-     return(data)
+    return data
 
 

@@ -14,10 +14,8 @@ def print_comparison(name, dates, times, obs_data, computed_data):
 
     # Output comparison of data
     print('                ORIGINAL  COMPUTED')
-    print(' DATE    TIME  WINDCHILL WINDCHILL DIFFERENCE')
+    print(' DATE    TIME  {name.upper():>9}  {name.upper():>9} DIFFERENCE')
     print('------- ------ --------- --------- ----------')
-    zip_data = zip(data['date'], data['time'], data['windchill'], windchill)
-    for date, time, wc_obs, wc_comp in zip_data:
-        wc_diff = wc_obs - wc_comp
-        print(f'{date} {time:>6} {wc_obs:9.6f} {wc_comp:9.6f} {wc_diff:10.6f}')
 
+    for date, time, orig, comp in zip(dates, times, obs_data, computed_data):
+        print(f'{date} {time:>6} {orig:9.6f} {comp:9.6f} {orig-comp:10.6f}')
