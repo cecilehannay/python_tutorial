@@ -94,5 +94,51 @@ Stage everything (don’t forget the \__init__.py\ file!) and commit
 >
 >*git commit -m "Creating myutils package"*
 
+Create a setup.py file one level above your myutils package (in the python_tutorial directory):
+The setup.py file is a Python file necessary for package distribution. This file tells pip how to install your package into the common Python space for your python interpreter. Required information is the name of your package, the version of your package (which you can choose), and a list of packages you’d like installed by pip (e.g., your mysci package).
+
+>*touch setup.py*
+
+Edit setup.py
+
+*
+from setuptools import setup
+
+setup(
+    name="myutils",
+    version="1.0.0",
+    description="myutils package",
+    author="Cecile Hannay",
+    author_email="hannay@ucar.edu",
+    packages=["myutils"],
+    install_requires=[],
+)
+*
 
 
+Push to GitHub!
+
+>*git add setup.py*
+>
+>*git commit -m "Adding setup.py"*
+>
+>*git push origin main*
+
+Pip Install your package locally.
+To test that our package is set up correctly, let’s install it into our project repository.
+
+>* pip install . *
+
+Everything should install smoothly, and now you will be able to import mysci in any Python code that you write, regardless of where that code is…*as long as you use the same python interpreter*! See the Note below.
+
+Let’s use pip to uninstall the package we just installed:
+
+>*pip uninstall myutils*
+
+Install from your GitHub repository
+Now, let’s re-install our package directly from GitHub.
+
+>* pip install git+https://github.com/cecilehannay/python_tutorial.git *
+
+Show which package are install
+>*conda list*
